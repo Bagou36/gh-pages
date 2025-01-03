@@ -1,0 +1,100 @@
+/* 重置一些基本樣式 */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+/* 設置 body 和 header 樣式 */
+body {
+    font-family: Arial, sans-serif;
+    background-color: #f4f4f4;
+}
+
+/* 設定 header 樣式 */
+header {
+    background-color: yellow; /* 設定背景顏色為黃色 */
+    color: black; /* 設定文字顏色為黑色 */
+    text-align: center;
+    padding: 20px;
+}
+
+h1 {
+    font-size: 24px;
+    font-weight: bold;
+}
+
+/* 上方區塊容器 */
+.header-container {
+    display: flex; /* 使用 Flexbox 來排列區塊 */
+    justify-content: space-evenly; /* 區塊平均分佈 */
+    align-items: center; /* 垂直對齊 */
+    padding: 20px;
+    background-color: #fff;
+}
+
+/* LOGO 區塊 */
+.logo-container {
+    margin-right: 20px; /* 給 LOGO 區塊一些右側間距 */
+    background-color: yellow; /* 設定 LOGO 背後的底色為黃色 */
+    padding: 10px; /* 增加一些內邊距來讓底色顯示 */
+    border-radius: 5px; /* 圓角效果 */
+}
+
+.logo-img {
+    height: 50px; /* 設定 LOGO 的高度 */
+    width: auto; /* 讓寬度自動調整，保持比例 */
+}
+
+/* 每個區塊 */
+.header-item {
+    position: relative;
+    text-align: center;
+    width: 200px; /* 可以根據需求調整 */
+    padding: 10px;
+    background-color: #ddd;
+    border-radius: 5px;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+    margin-right: 20px; /* 區塊之間的間距 */
+}
+
+/* 標題樣式 */
+.header-item-title {
+    font-size: 18px;
+    font-weight: bold;
+}
+
+/* 隱藏選項區塊，當 hover 時顯示 */
+.header-item-options {
+    display: none;
+    position: absolute;
+    top: 100%; /* 讓選項出現在區塊下方 */
+    left: 0;
+    background-color: #333;
+    width: 100%;
+    padding: 10px 0;
+    border-radius: 5px;
+}
+
+.header-item-options ul {
+    list-style-type: none;
+}
+
+.header-item-options li {
+    padding: 5px 20px;
+}
+
+.header-item-options a {
+    color: white;
+    text-decoration: none;
+    display: block;
+}
+
+.header-item-options a:hover {
+    background-color: #555;
+}
+
+/* 當 hover 區塊時顯示選項 */
+.header-item:hover .header-item-options {
+    display: block;
+}
